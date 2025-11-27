@@ -178,7 +178,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border-radius: 8px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
@@ -311,6 +311,9 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  /* this is what is making the images look low-contrast */
+  filter: brightness(1.1) contrast(0.7) saturate(0.6);
+  opacity: 0.85;
 }
 
 .image-placeholder {
@@ -598,12 +601,9 @@ footer {
   }
 
   .search-bar {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .search-btn {
-    width: 100%;
-  }
 
   .filter-tabs {
     gap: 0.5rem;
